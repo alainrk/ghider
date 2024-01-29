@@ -22,7 +22,13 @@
       max-width: 48px;
       margin: 10px 0;
     }
-    button {
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    button#hideNotice {
       background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
@@ -32,8 +38,21 @@
       cursor: pointer;
       font-size: 14px;
     }
-    button:hover {
+    button#hideNotice:hover {
       background-color: #45a049;
+    }
+    button#resetPreference {
+      padding: 5px 10px;
+      font-size: 12px;
+      background: linear-gradient(to right, #a9a9a9, #808080);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button#resetPreference:hover {
+      background: linear-gradient(to right, #808080, #696969);
     }
     footer {
       margin-top: 20px;
@@ -52,9 +71,12 @@
 <body>
   <img src="images/logo.png" alt="Logo">
   <h1>F**k that notice</h1>
-  <button id="hideNotice">Hide!</button>
+  <div class="button-container">
+    <button id="hideNotice">Hide Notice</button>
+    <button id="resetPreference">Reset Preference</button>
+  </div>
   <footer>
-    by <a href="https://github.com/alainrk" target="_blank">alainrk</a>
+    by <a href="https://github.com/alainrk/ghider" target="_blank">alainrk</a>
   </footer>
   <script src="popup.js"></script>
 </body>
