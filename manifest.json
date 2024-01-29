@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Notice Hider",
+  "description": "This extension hides the js-notice div on GitHub pages.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["hide-notice.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  }
+}
+
