@@ -3,7 +3,7 @@
   "name": "GitHub Org Alert Hider",
   "description": "This extension hides the organization alert banner on GitHub pages.",
   "version": "1.0",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
