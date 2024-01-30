@@ -22,7 +22,12 @@ function hideBanner() {
 document
   .getElementById("resetPreference")
   .addEventListener("click", async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
     chrome.storage.sync.remove("hideBanner", function () {
       console.log("Preference reset.");
     });
+
+    // Refresh the current tab
+    chrome.tabs.reload(tab.id);
   });
