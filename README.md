@@ -1,7 +1,7 @@
 # F\*\*k that banner
 
 <p align="center">
-  <img src='images/logo.png' width='400'>
+  <img src='images/logo.png' width='200'>
 </p>
 
 Tired of that persistent and distracting notification banners on GitHub? Hide it with just a click!
@@ -21,5 +21,5 @@ After installation, simply click on the extension icon when you're on a GitHub p
 - Reset: Reset your preferences and bring the banner back.
 
 <p align="center">
-  <img src='images/banner.png' height='100'>
+  <img src='images/banner.png' height='130'>
 </p>
