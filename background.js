@@ -1,20 +1,19 @@
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (tab.url && tab.url.includes("github.com")) {
-    chrome.storage.sync.get('hideNotice', function(data) {
-      if(data.hideNotice) {
+    chrome.storage.sync.get("hideBanner", function (data) {
+      if (data.hideBanner) {
         chrome.scripting.executeScript({
           target: { tabId: tab.id },
-          function: hideNotice
+          function: hideBanner,
         });
       }
     });
   }
 });
 
-function hideNotice() {
-  const notice = document.querySelector('.js-notice');
-  if (notice) {
-    notice.style.display = 'none';
+function hideBanner() {
+  const banner = document.querySelector(".js-notice");
+  if (banner) {
+    banner.style.display = "none";
   }
 }
-
