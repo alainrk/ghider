@@ -21,5 +21,5 @@ After installation, simply click on the extension icon when you're on a GitHub p
 - Reset: Reset your preferences and bring the banner back.
 
 <p align="center">
-  <img src='images/banner.png' height='200'>
+  <img src='images/banner.png' height='100'>
 </p>
